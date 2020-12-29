@@ -1,0 +1,18 @@
+addr: :30911
+token: # if empty auto generate it
+providers:
+  - type: nginx
+    name: nginx
+  - type: caddy
+    name: caddy
+sites:
+  - provider: nginx
+    host: example.dev
+    upstreams:
+      - dial: https://www.baidu.com
+        weight: 2
+      - dial: https://m.baidu.com
+        weight: 1
+    auto_https:
+      disable: false
+      disable_redirect: true
