@@ -1,12 +1,12 @@
 addr: :30911
-token: # if empty auto generate it
+token: eacdn-2020! # if empty auto generate it
 providers:
   - type: nginx
     name: nginx
   - type: caddy
     name: caddy
 sites:
-  - provider: nginx
+  - provider: nginx # provider name not type
     host: example.dev
     upstreams:
       - dial: https://www.baidu.com
@@ -16,3 +16,4 @@ sites:
     auto_https:
       disable: false
       disable_redirect: true
+    # cache control

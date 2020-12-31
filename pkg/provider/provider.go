@@ -15,6 +15,8 @@ var (
 
 // TODO: with more host instance with ssh
 
+// TODO: add a manager
+
 // Provider define a cdn provider
 type Provider interface {
 	// CDN interface, TODO: with options

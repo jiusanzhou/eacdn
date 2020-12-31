@@ -11,7 +11,7 @@ type Config struct {
 	Debug     bool              `json:"debug,omitempty" yaml:"debug"`
 	Token     string            `json:"token,omitempty" yaml:"token"`
 	Providers []provider.Object `json:"providers,omitempty" yaml:"providers" opts:"-"`
-	Sites     []core.Site       `json:"sites,omitempty" yaml:"sites" opts:"-"`
+	Sites     []*core.Site      `json:"sites,omitempty" yaml:"sites" opts:"-"`
 }
 
 // New ...

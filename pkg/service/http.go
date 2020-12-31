@@ -27,7 +27,7 @@ func (s *Service) installHandlers(r *mux.Router) {
 
 	// install pprof for debug from http default serve mux
 	if s.Config.Debug {
-		log.Println("I Start the pprof handler.")
+		log.Println("I Start the pprof handler")
 
 		debugr := r.PathPrefix("/debug").Subrouter()
 		// TODO: add other endpoint for debug
@@ -57,7 +57,7 @@ func (s *Service) startHTTP() error {
 	// call the handler installer
 	s.installHandlers(r)
 
-	log.Printf("I Listen eacdn service on %s\n", s.Config.Addr)
+	log.Printf("I Listen EaCDN service on %s\n", s.Config.Addr)
 
 	// listen and serve the http service
 	// blocking at here

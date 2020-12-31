@@ -15,7 +15,7 @@ import (
 func main() {
 	svr := service.New()
 	cmd.Option(
-		cli.GlobalConfig(svr.Config),
+		cli.GlobalConfig(svr.Config, cli.WithConfigName()),
 		cli.Run(func(c *cli.Command, args ...string) {
 			if err := svr.Run(); err != nil {
 				log.Println("start the eacdn service error:", err)
