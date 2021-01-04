@@ -3,17 +3,21 @@ token: eacdn-2020! # if empty auto generate it
 providers:
   - type: nginx
     name: nginx
+    sudo: true
   - type: caddy
     name: caddy
 sites:
   - provider: nginx # provider name not type
     host: example.dev
+    port: 3080
+    disabled: false
+    root: #
     upstreams:
-      - dial: https://www.baidu.com
+      - dial: www.baidu.com
         weight: 2
-      - dial: https://m.baidu.com
+      - dial: m.baidu.com
         weight: 1
     auto_https:
       disable: false
       disable_redirect: true
-    # cache control
+    # TODO: cache control
