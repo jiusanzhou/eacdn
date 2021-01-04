@@ -15,3 +15,4 @@ Turn any server to be a CDN provider.
 ### https
 
 - https://github.com/acmesh-official/acme.sh
+- https://ssl-config.ohttps.com/#server=nginx&version=1.18&config=intermediate&openssl=1.1.1d&guideline=5.6
