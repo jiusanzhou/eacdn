@@ -11,6 +11,5 @@ require (
 	github.com/imdario/mergo v0.3.11 // indirect
 	github.com/mitchellh/copystructure v1.0.0 // indirect
 	go.zoe.im/x v0.3.17
-	golang.org/x/sys v0.0.0-20201214210602-f9fddec55a1e // indirect
-	gopkg.in/yaml.v2 v2.3.0 // indirect
+	golang.org/x/sys v0.1.0 // indirect
 )
